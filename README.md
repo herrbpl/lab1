@@ -27,7 +27,7 @@ java -cp src Answer
 ```
 #!bash
 
-javac -cp 'src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar' test/AnswerTest.java
+javac -encoding utf-8 -cp 'src:test:test/junit-4.12.jar:test/hamcrest-core-1.3.jar' test/AnswerTest.java
 
 ```
 Sama Windows aknas (koolonite asemel peavad olema semikoolonid):
@@ -35,7 +35,7 @@ Sama Windows aknas (koolonite asemel peavad olema semikoolonid):
 ```
 #!bash
 
-javac -cp 'src;test;test/junit-4.12.jar;test/hamcrest-core-1.3.jar' test/AnswerTest.java
+javac -encoding utf-8 -cp 'src;test;test/junit-4.12.jar;test/hamcrest-core-1.3.jar' test/AnswerTest.java
 
 
 ```
