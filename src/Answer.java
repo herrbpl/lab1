@@ -8,11 +8,26 @@ public class Answer {
       //   that do not need an independent method!
     
       // conversion double -> String
-
+	   
+	  System.out.println(Double.toString(13.0));
+	 System.out.println(String.valueOf(13.0));
       // conversion String -> int
-
+	 int x=0;
+	 try {
+		 x = Integer.parseInt("13x");
+	} catch (NumberFormatException e) {
+		// TODO: handle exception
+		System.out.println(e.toString());
+	}
+	 
+	 System.out.println(x+1);
+	 
       // "hh:mm:ss"
-
+	 Calendar rightNow = Calendar.getInstance();
+	 System.out.println(rightNow.get(Calendar.HOUR_OF_DAY));
+	System.out.println((Calendar.getInstance().getTime().toString()));
+	 
+	 
       // cos 45 deg
 
       // table of square roots
@@ -59,7 +74,8 @@ public class Answer {
    static public <T extends Object & Comparable<? super T>>
          T maximum (Collection<? extends T> a) 
             throws NoSuchElementException {
-      return null; // TODO!!! Your code here
+      //return null; // TODO!!! Your code here
+	   return Collections.max(a);
    }
 
    /** Counting the number of words. Any number of any kind of
@@ -76,7 +92,19 @@ public class Answer {
     * @return processed string
     */
    public static String reverseCase (String s) {
-      return null; // TODO!!! Your code here
+	  StringBuilder result = new StringBuilder();
+		for (int i = 0; i < s.length(); i++) {
+			Character ch = s.charAt(i);
+			if (Character.isLowerCase(ch)) {
+				result.append(Character.toUpperCase(ch));
+			} else if (Character.isUpperCase(ch)) {
+				result.append(Character.toLowerCase(ch));
+			} else {
+				result.append(ch);
+			}
+				
+		}
+      return result.toString(); // TODO!!! Your code here
    }
 
    /** List reverse. Do not create a new list.
